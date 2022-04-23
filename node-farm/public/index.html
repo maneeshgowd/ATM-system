@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>ATM</title>
+  </head>
+  <body>
+    <img src="./icons/icon.svg" alt="icon" class="icon" />
+    <div class="main div">
+      <h1 class="title">Enter Pin...</h1>
+      <input
+        type="text"
+        class="input pin"
+        id="enter-pin"
+        placeholder="Please enter your pin!"
+        minlength="4"
+      />
+      <button class="submit-pin button" id="submit-pin">submit</button>
+    </div>
+
+    <section class="options-page div hidden">
+      <h1 class="title" id="username"></h1>
+      <p class="para">** select your option from below options **</p>
+      <div class="options div">
+        <button class="option button" id="withdraw">1. withdraw cash</button>
+        <button class="option button" id="transferCash">2. Transfer Cash</button>
+        <button class="option button" id="changePin">3. Change pin</button>
+        <button class="option button" id="checkBalance">4. check balance</button>
+      </div>
+    </section>
+
+    <section class="withdraw div hidden">
+      <h1 class="title">Withdraw &downarrow;</h1>
+
+      <div class="withdraw-options div">
+        <button class="button option" id="savings">1. savings account</button
+        ><button class="button option" id="current">2. current account</button>
+      </div>
+
+      <div class="withdraw-money div hidden">
+        <p class="para">Enter amount in hundreds.</p>
+        <input
+          type="number"
+          class="input"
+          id="withdraw-money"
+          placeholder="Enter amount.."
+          min="100"
+          max="25000"
+        />
+        <button class="button draw-money" id="draw-money">Enter</button>
+      </div>
+
+      <button class="button" id="exit">E. exit</button>
+    </section>
+
+    <section class="balance div hidden">
+      <h1 class="title">Balance ₹</h1>
+      <p class="para">Hello Maneesh Your balance is..</p>
+
+      <div class="available-balance div">
+        <h2 class="sub-title">Available Balance: <span>₹4500.00</span></h2>
+        <h2 class="sub-title">Ledger Balance: <span>₹5000.00</span></h2>
+      </div>
+
+      <button class="button" id="exit">E. exit</button>
+    </section>
+
+    <section class="change-pin div hidden">
+      <h1 class="title">Change pin 🔑</h1>
+
+      <div class="pin-change div">
+        <input
+          type="text"
+          class="input old-pin"
+          placeholder="Enter old pin.."
+          minlength="4"
+          maxlength="6"
+        />
+        <input
+          type="text"
+          class="input new-pin"
+          placeholder="Enter new pin.."
+          minlength="4"
+          maxlength="6"
+        />
+        <button class="button draw-money" id="changeUserPin">Enter</button>
+      </div>
+
+      <button class="button" id="exit">E. exit</button>
+    </section>
+
+    <section class="transfer div hidden">
+      <h1 class="title">Transfer Money 💰</h1>
+
+      <div class="div transfer-money">
+        <input
+          type="text"
+          class="input"
+          id="account-no"
+          placeholder="Enter account number.."
+          minlength="8"
+          maxlength="8"
+        />
+        <input
+          type="number"
+          class="input"
+          id="send-money"
+          placeholder="Enter amount.."
+          min="100"
+          max="25000"
+        />
+        <button class="button draw-money" id="transfer-money">Enter</button>
+      </div>
+      <button class="button" id="exit">E. exit</button>
+    </section>
+
+    <div class="error hidden">Error</div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
